@@ -40,8 +40,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: var(--accent-1); }
-
 /* Navbar */
 .navbar {
     border-bottom: 1px solid var(--border);
@@ -71,7 +69,6 @@ a { color: var(--accent-1); }
 .section-card {
     color: var(--text);
 }
-.section-card a { color: var(--accent-1); }
 .section-card .muted { color: var(--muted); }
 
 .section-card:hover {
