@@ -1,0 +1,104 @@
+
+
+/*
+    Global style definitions and theme variables
+    - Palette inspired by Linux pastel colors
+    - Light theme is default, dark theme toggled by `data-theme="dark"` on `body`
+    TODO: adjust spacing/typography to taste
+*/
+
+:root {
+    --bg: #fdfdfd; /* white */
+    --text: #100f0f; /* very dark */
+    --muted: #909394; /* gray */
+    --accent-1: #7ed2fa; /* blue */
+    --accent-2: #f9d066; /* yellow */
+    --border: #e9e9ea;
+    --card-bg: #ffffff;
+    --card-border: rgba(144,147,148,0.12);
+}
+
+body[data-theme="dark"] {
+    --bg: #100f0f; /* dark */
+    --text: #fdfdfd; /* light */
+    --muted: #909394;
+    --card-bg: #141313;
+    --border: #2a2a2a;
+    --card-border: rgba(255,255,255,0.04);
+}
+
+/* Base layout */
+html, body {
+    height: 100%;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--accent-1); }
+
+/* Navbar */
+.navbar {
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+}
+.navbar .navbar-brand { color: var(--text); font-weight: 600; }
+.navbar .nav-link { color: var(--muted); }
+.navbar .nav-link.active { color: var(--text); font-weight:600; }
+.navbar .btn-theme {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+/* Main sections */
+.site-section { padding: 4rem 0; }
+.section-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border); /* légère bordure grise */
+    border-radius: 0.6rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(16,15,15,0.04);
+    transition: box-shadow .15s ease, transform .12s ease;
+}
+
+/* Ensure card text contrasts with current theme */
+.section-card {
+    color: var(--text);
+}
+.section-card a { color: var(--accent-1); }
+.section-card .muted { color: var(--muted); }
+
+.section-card:hover {
+    box-shadow: 0 6px 18px rgba(16,15,15,0.06);
+    transform: translateY(-2px);
+}
+
+.muted { color: var(--muted); }
+
+/* Cards and utilities */
+.accent-badge { background: var(--accent-1); color: #071925; padding: .25rem .5rem; border-radius: .5rem; }
+.accent-2 { background: var(--accent-2); color: #2b1b00; padding: .25rem .5rem; border-radius: .5rem; }
+
+/* Footer */
+footer.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+    background: transparent;
+}
+
+/* Make sure fixed navbar doesn't overlap content */
+body { padding-top: 70px; }
+
+/* Small responsive tweaks */
+@media (max-width: 767px) {
+    .site-section { padding: 2rem 0; }
+    body { padding-top: 100px; }
+}
+
+/* TODO: add any additional component customizations here */

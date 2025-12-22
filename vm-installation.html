@@ -3,15 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SAÉ S1.03 — Systeme</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- TODO: add favicon and meta descriptions -->
+    <title>VM Installation — SAÉ S1.03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
   <body data-theme="light">
-    <!-- Fixed navbar -->
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -22,15 +18,13 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <div class="collapse navbar-collapse" id="siteNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
               <li class="nav-item"><a class="nav-link" href="pages/contexte-objectifs.html">Contexte</a></li>
               <li class="nav-item"><a class="nav-link" href="pages/organisation-projet.html">Organisation</a></li>
               <li class="nav-item"><a class="nav-link" href="pages/calendrier.html">Calendrier</a></li>
               <li class="nav-item"><a class="nav-link" href="pages/travaux-livrables.html">Travaux & livrables</a></li>
-              <!-- Regroupement des pages moins essentielles dans un dropdown "Plus" -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plus</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreDropdown">
@@ -40,7 +34,6 @@
                 </ul>
               </li>
               <li class="nav-item ms-3">
-                <!-- Theme toggle: simple switch button; JS handles data-theme on body -->
                 <button class="btn btn-sm btn-theme theme-toggle" aria-pressed="false">Thème sombre</button>
               </li>
             </ul>
@@ -49,64 +42,14 @@
       </nav>
     </header>
 
-    <main>
-      <section class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="section-card">
-                <h1>Accueil — Présentation générale</h1>
-                <p class="muted">TODO: Contexte et problématique professionnelle — expliquer ici la SAÉ S1.03.</p>
-                <hr>
-                <h2>Objectifs</h2>
-                <p>TODO: Décrire les objectifs généraux et spécifiques de la SAÉ.</p>
-                <h3>Utilisation prévue</h3>
-                <p>TODO: Indiquer que le rapport final sera hébergé sur une VM Linux avec Apache/Nginx.</p>
-              </div>
-              
-              <div class="section-card mt-4">
-                <h2>Commentaires vidéo (anglais)</h2>
-                <p>Commentaire vidéo en anglais — TODO: insérer lien vers la vidéo et le commentaire en anglais.</p>
-              </div>
-            </div>
-
-            <aside class="col-lg-4">
-              <div class="section-card">
-                <h5>Raccourcis</h5>
-                <ul>
-                  <li>TODO: Lien vers la section Organisation</li>
-                  <li>TODO: Lien vers le calendrier détaillé</li>
-                  <li>TODO: Espace pour contact et binôme</li>
-                </ul>
-              </div>
-
-              <div class="section-card mt-4">
-                <h5>Informations</h5>
-                <p class="muted">TODO: Placeholders pour ressources et produits logiciels.</p>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
+    <main class="container site-section">
+      <h1>VM Installation</h1>
+      <p>TODO: décrire l'installation de la machine virtuelle ici.</p>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">Tiago, Kenza & Yasmine — 101 — 2025</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <small>Liens utiles: TODO: Moodle • IUT • Documentation</small>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer class="site-footer mt-4"><div class="container"><p class="mb-0">TODO: footer</p></div></footer>
 
-    <!-- Bootstrap JS bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-    <!-- Theme toggle script (minimal) -->
     <script>
       (function(){
         const toggles = Array.from(document.querySelectorAll('.theme-toggle'));
@@ -125,8 +68,6 @@
           setTheme(next);
           localStorage.setItem(lsKey, next);
         }));
-
-        // Ensure dropdowns work by initializing them via Bootstrap API
         if(window.bootstrap){
           document.querySelectorAll('.dropdown-toggle').forEach(el => new bootstrap.Dropdown(el));
         }
