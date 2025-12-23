@@ -10,33 +10,81 @@
   <body data-theme="light">
     <!-- Navbar -->
     <header>
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="../index.html">
-            <img src="../assets/img/linux_icon.png" alt="Linux" width="40" height="40" class="me-2">
-            <span>Systeme</span>
+      <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="assets/img/linux_icon.png"
+              alt="Linux"
+              width="40"
+              height="40"
+              class="me-2"
+            />
+            <span>Système</span>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="siteNav">
+
+          <div class="collapse navbar-collapse text-center" id="siteNav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
-              <li class="nav-item"><a class="nav-link" href="contexte-objectifs.html">Contexte</a></li>
-              <li class="nav-item"><a class="nav-link" href="organisation-projet.html">Organisation</a></li>
-              <li class="nav-item"><a class="nav-link" href="calendrier.html">Calendrier</a></li>
-              <li class="nav-item"><a class="nav-link active" href="travaux-livrables.html">Travaux & livrables</a></li>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contexte-objectifs.html"
+                  >Contexte</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/organisation-projet.html"
+                  >Organisation</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/travaux-livrables.html"
+                  >Rapport</a
+                >
+              </li>
+              <!-- Regroupement des pages moins essentielles dans un dropdown "Plus" -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plus</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreDropdown">
-                  <li><a class="dropdown-item" href="questions.html">Questions</a></li>
-                  <li><a class="dropdown-item" href="competences.html">Compétences</a></li>
-                  <li><a class="dropdown-item" href="ressources.html">Ressources</a></li>
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="moreDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Plus</a
+                >
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="moreDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item" href="pages/questions.html"
+                      >Questions</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/competences.html"
+                      >Compétences</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/ressources.html"
+                      >Ressources</a
+                    >
+                  </li>
                 </ul>
-              </li>
-              <li class="nav-item ms-3">
-                <button class="btn btn-sm btn-theme theme-toggle" aria-pressed="false">Thème sombre</button>
-              </li>
             </ul>
           </div>
         </div>
