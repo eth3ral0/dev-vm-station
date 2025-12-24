@@ -6,6 +6,13 @@
     <title>Organisation du projet — SAÉ S1.03</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.umd.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.css"/>
+    <style>
+      #gantt{min-height:360px;margin-top:1rem}
+    </style>
   </head>
   <body data-theme="light">
     <!-- Navbar -->
@@ -100,11 +107,34 @@
           <li>TODO: Rôle 2 — TODO</li>
         </ul>
       </section>
+
+      <section class="mt-4 section-card">
+        <h2>Plannification et progression</h2>
+        <div id="gantt" aria-label="Diagramme de Gantt"></div>
+      </section>
     </main>
     <footer class="site-footer mt-4"><div class="container"><p class="mb-0">TODO: footer</p></div></footer>
 
     <!-- Bootstrap JS bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        const tasks = [
+          { id: '1', name: 'Installation de la Machine Virtuelle', start: '2025-11-29', end: '2025-12-14', progress: 100 },
+          { id: '2', name: 'Création des utilisateurs et des groupes', start: '2025-12-02', end: '2025-12-03', progress: 100, dependencies: '1' },
+          { id: '3', name: "Personnalisation du .bashrc de l'administrateur", start: '2025-12-11', end: '2025-12-12', progress: 100, dependencies: '1' },
+          { id: '4', name: "Personnalisation du .bashrc des utilisateurs", start: '2025-12-12', end: '2025-12-13', progress: 100, dependencies: '1' },
+          { id: '5', name: "Mise en place du site web", start: '2025-12-13', end: '2025-12-24', progress: 100},
+          { id: '6', name: "Installation de Apache2 sur la machine", start: '2025-12-13', end: '2025-12-14', progress: 100, dependencies: '1,5' },
+          { id: '7', name: "Création du Site Web", start: '2025-12-19', end: '2025-12-24', progress: 100, dependencies: '5' },
+        ];
+        const gantt = new Gantt(document.getElementById('gantt'), tasks, {
+          on_click: task => { console.log('Gantt click', task); },
+          on_date_change: (task, start, end) => { console.log('Date changed', task, start, end); },
+          on_progress_change: (task, progress) => { console.log('Progress', task, progress); }
+        });
+      });
+    </script>
     <script>
       (function(){
         const toggles = Array.from(document.querySelectorAll('.theme-toggle'));
