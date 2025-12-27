@@ -82,6 +82,14 @@ body {
 .accent-badge { background: var(--accent-1); color: #071925; padding: .25rem .5rem; border-radius: .5rem; }
 .accent-2 { background: var(--accent-2); color: #2b1b00; padding: .25rem .5rem; border-radius: .5rem; }
 
+/* Bouton pour revenir au haut de la page */
+#backToTop {
+  bottom: 20px;
+  right: 20px;
+  display: none;   /* caché quand on est en haut */
+  z-index: 1050;   /* au-dessus du contenu */
+}
+
 /* Footer */
 footer.site-footer {
     border-top: 1px solid var(--border);
