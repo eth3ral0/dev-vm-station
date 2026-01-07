@@ -2,11 +2,12 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VM Installation — SAÉ S1.03</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" type="image/ico" href="/assets/favicon.ico">
 </head>
 
 <body data-theme="light">
@@ -14,7 +15,7 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/index.html">
-          <img src="/assets/img/linux_icon.png" alt="Linux" width="40" height="40" class="me-2" />
+          <img src="/assets/img/linux_icon.png" alt="Linux" width="40" height="40" class="me-2">
           <span>Système</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
@@ -70,18 +71,19 @@
               </p>
               <p>
                 Télécharger l'image ISO d'Ubuntu 24.04 LTS à partir du site officiel :
-                <a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a </p>
-                <img src="/assets/img/vm-journey/01.png" alt="Téléchargement Ubuntu"
-                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
-                <img src="/assets/img/vm-journey/02.png" alt="Téléchargement Ubuntu"
-                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+                <a href="https://ubuntu.com/download/desktop">https://ubuntu.com/download/desktop</a>
+              </p>
+              <img src="/assets/img/vm-journey/01.png" alt="Téléchargement Ubuntu"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <img src="/assets/img/vm-journey/02.png" alt="Téléchargement Ubuntu"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
               <p>On se retrouve donc avec l'installateur de VirtualBox, ainsi que l'image disque d'installation de
                 Ubuntu.</p>
               <p>
                 <img src="/assets/img/vm-journey/03.png" alt="Téléchargement Ubuntu"
-                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
                 <img src="/assets/img/vm-journey/04.png" alt="Téléchargement Ubuntu"
-                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+                  class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             </div>
             <p>On procède a l'installation de VirtualBox.</p>
             <hr>
@@ -89,15 +91,15 @@
             <p>Une fois installé on arrive sur cette interface ou on va créer une nouvelle Machine Virtuelle en haut a
               gauche.</p>
             <img src="/assets/img/vm-journey/05.png" alt="Interface de VirtualBox"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Sur cette première étape, on va nommé notre Machine, spécifié le système d'exploitation utilisé et donner
               notre image disque d'installation (précédemment téléchargé) a VirtualBox.</p>
             <img src="/assets/img/vm-journey/06.png" alt="Création de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On choisi ensuite la quantité de RAM alloué a la machine virtuelle, 2048 Mo est un bon compromis pour une
               utilisation fluide.</p>
             <img src="/assets/img/vm-journey/07.png" alt="Allocation de la RAM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Ici nous lui avons allouer :
               <strong>4096 Mb de RAM</strong>
               ainsi que <strong>3 Processeurs</strong>.
@@ -107,105 +109,106 @@
               alloué directement sur le disque dur de notre hôte, mais uniquement lorsque notre machine virtuelle a
               besoin de plus de stockage.</p>
             <img src="/assets/img/vm-journey/08.png" alt="Allocation du Disque Dur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Notre machine virtuelle est maintenant créer et prête a être démarré pour procéder au processus
               d'installation.</p>
             <img src="/assets/img/vm-journey/09.png" alt="Démarrage de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <hr>
             <h3>Installation de la distribution</h3>
             <p>On démarre donc la machine virtuelle, et on aperçoit que GRUB démarre !</p>
             <img src="/assets/img/vm-journey/10.png" alt="Démarrage de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm center" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm center">
             <p>On arrive sur l'interface d'installation d'Ubuntu, on choisi la langue puis on clique sur
               <strong>Suivant</strong>.
             </p>
             <img src="/assets/img/vm-journey/11.png" alt="Installation Ubuntu - Choix de la langue"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On choisira l'installation par défaut, vu que ce n'est pas une machine qui a besoin de beaucoup de
               paquet.</p>
             <img src="/assets/img/vm-journey/12.png" alt="Installation Ubuntu - Type d'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On choisi d'effacer le disque et d'installer Ubuntu, vu que la machine virtuelle est neuve et n'a pas
               besoin de partitionnement spécifique.</p>
             <img src="/assets/img/vm-journey/13.png" alt="Installation Ubuntu - Type d'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Ici on va configurer notre utilisateur administrateur avec le modèle demander sur le document de
               référence.</p>
             <img src="/assets/img/vm-journey/14.png" alt="Installation Ubuntu - Configuration utilisateur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>L'installation est fini, on peu redémarrer la VM.</p>
             <img src="/assets/img/vm-journey/15.png" alt="Installation Ubuntu - Fin de l'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <hr>
             <h3>Telechargement des additions</h3>
             <p>On peut se connecter à notre compte Administrateur.</p>
             <img src="/assets/img/vm-journey/16.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Avant d'installer les additions, Avant de faire quoi que ce soit, on va installer les Additions invités
               pour pouvoir utiliser le Drag n drop et le presse papiers.</p>
             <img src="/assets/img/vm-journey/17.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On installe maintenant les dépendances nécessaires à l'installation des additions invités.</p>
             <img src="/assets/img/vm-journey/18.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Ensuite on ouvrira le disque que l'on a monté dans la VM puis on ouvrira sa racine dans le terminal</p>
             <img src="/assets/img/vm-journey/19.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On execute l'autorun dans le disque.</p>
             <img src="/assets/img/vm-journey/20.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>L'installation est lancé et s'est achevé.</p>
             <img src="/assets/img/vm-journey/21.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Une fois que l'installation est fini on va éjecter le disque virtuel</p>
             <img src="/assets/img/vm-journey/22.png" alt="Éjection du disque virtuel"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>En suite on va pouvoir aller dans les paramètres du système puis sur la barre latérale système et dans la
               rubrique Utilisateurs</p>
             <img src="/assets/img/vm-journey/23.png" alt="Paramètres Utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Ici on va pouvoir rajouter nos utilisateurs.</p>
             <img src="/assets/img/vm-journey/24.png" alt="Ajout des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Voici un exemple pour un Utilisateur :</p>
             <img src="/assets/img/vm-journey/25.png" alt="Configuration utilisateur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>A la fin on a quelque chose qui ressemble à ça</p>
             <img src="/assets/img/vm-journey/26.png" alt="Utilisateurs créés"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Ensuite on va lancer un terminal pour créer notre groupe et rajouter les utilisateurs dedans, puis
               vérifier nos modifications.</p>
             <img src="/assets/img/vm-journey/27.png" alt="Création du groupe et ajout des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>On va maintenant pouvoir attaquer la customisation de notre terminal grâce au fichier de configuration
               ~.bashrc . Les lignes commençant par echo sont des lignes que nous avons rajouté.</p>
             <img src="/assets/img/vm-journey/28.png" alt="Modification du fichier .bashrc"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <img src="/assets/img/vm-journey/29.png" alt="Terminal personnalisé"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Maintenant que nous ouvrons le terminal, on obtient ce résultat :</p>
             <img src="/assets/img/vm-journey/30.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>Voilà des dérives que nous avons fait pour chaque utilisateurs.</p>
             <img src="/assets/img/vm-journey/31.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <img src="/assets/img/vm-journey/32.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <img src="/assets/img/vm-journey/33.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>L’installation d’Apache2 est effectuée sur la machine virtuelle en utilisant un compte administrateur :
               après connexion à ce compte, la commande <strong>sudo apt install apache2</strong> permet d’installer le
               serveur web et ses paquets associés.</p>
             <img src="/assets/img/vm-journey/34.png" alt="Installation Apache2"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
             <p>À l’issue de l’installation, nous avons vérifié le bon fonctionnement du serveur Apache en accédant à
               l’adresse localhost : l’affichage de la page par défaut confirme que le service HTTP est correctement
               opérationnel.</p>
             <img src="/assets/img/vm-journey/35.png" alt="Vérification Apache2"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm" />
+              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
           </div>
         </div>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
