@@ -1,153 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Système</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    >
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/ico" href="assets/favicon.ico">
-  </head>
-  <body data-theme="light">
-    <!-- Fixed navbar -->
-    <header>
-      <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="/index.html">
-            <img
-              src="/assets/img/linux_icon.png"
-              alt="Linux"
-              width="40"
-              height="40"
-              class="me-2"
-            />
-            <span>Système</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#siteNav"
-            aria-controls="siteNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse text-center" id="siteNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-              <li class="nav-item">
-                <a class="nav-link active" href="/index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/contexte-objectifs.html"
-                  >Contexte</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/organisation-projet.html"
-                  >Organisation</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/travaux-livrables.html"
-                  >Rapport</a
-                >
-              </li>
-              <!-- Regroupement des pages moins essentielles dans un dropdown "Plus" -->
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="moreDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Plus</a
-                >
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="moreDropdown"
-                >
-                  <li>
-                    <a class="dropdown-item" href="/pages/questions.html"
-                      >Questions</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/pages/competences.html"
-                      >Compétences</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/pages/ressources.html"
-                      >Ressources</a
-                    >
-                  </li>
-                </ul>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Système</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/ico" href="assets/favicon.ico">
+</head>
 
-    <main>
-      <section class="site-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="section-card">
-                <h1>Introduction au Projet</h1>
-                <p class="muted">
-                  Ce site documente la mise en place d'un environnement de travail isolé et reproductible pour le développement.
-                </p>
-                <hr />
-                <h2>Gestion de Projet</h2>
-                <p>
-                  Diagramme de Gantt et répartition des tâches. et redirection vers le calendrier 
-                </p>
-                <h3>Utilisation prévue</h3>
-                <p>
-                  TODO: Indiquer que le rapport final sera hébergé sur une VM
-                  Linux avec Apache.
-                </p>
-              </div>
-
-              <div class="section-card mt-4">
-                <h2>Tutoriel - Installation pas à pas</h2>
-                <a href="/pages/vm-installation.html" class="btn btn-primary"> Commencer</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
+<body data-theme="light">
+  <!-- Fixed navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">Tiago, Kenza & Yasmine — Trio 2 — 2025</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <small>IUT Paris Cité - Rives de Seine</small>
-          </div>
+        <a class="navbar-brand d-flex align-items-center" href="/index.html">
+          <img src="/assets/img/linux_icon.png" alt="Linux" width="40" height="40" class="me-2" />
+          <span>Système</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+          aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="siteNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/contexte-objectifs.html">Contexte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/organisation-projet.html">Organisation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/travaux-livrables.html">Rapport</a>
+            </li>
+            <!-- Regroupement des pages moins essentielles dans un dropdown "Plus" -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Plus</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreDropdown">
+                <li>
+                  <a class="dropdown-item" href="/pages/questions.html">Questions</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pages/competences.html">Compétences</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pages/ressources.html">Ressources</a>
+                </li>
+              </ul>
+          </ul>
         </div>
       </div>
-    </footer>
+    </nav>
+  </header>
 
-    <!-- Bootstrap JS bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <main>
+    <section class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="section-card">
+              <h1>Introduction au Projet</h1>
+              <p class="muted">
+                Ce site documente la mise en place d'un environnement de travail isolé et reproductible pour le
+                développement.
+              </p>
+              <hr />
+              <h2>Organisation du site</h2>
+              <ul>
+                <li><a href="/pages/contexte-objectifs.html"><strong>Contexte</strong></a> : Objectifs et contexte du projet.</li>
+                <li><a href="/pages/organisation-projet.html"><strong>Organisation</strong></a> : Détails sur la gestion du projet (Diagramme de Gantt).</li>
+                <li><a href="/pages/vm-installation.html"><strong>Tutoriel</strong></a> : Instructions pour l'installation.</li>
+                <li><a href="/pages/travaux-livrables.html"><strong>Rapport</strong></a> : Bilan et livrables du projet.</li>
+              </ul>
+            </div>
+
+            <div class="section-card mt-4">
+              <h2>Tutoriel - Installation pas à pas</h2>
+              <a href="/pages/vm-installation.html" class="btn btn-primary"> Commencer</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">Tiago, Kenza & Yasmine — Trio 2 — 2025</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small>IUT Paris Cité - Rives de Seine</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
