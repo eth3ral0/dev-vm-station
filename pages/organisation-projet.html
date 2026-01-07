@@ -1,24 +1,18 @@
 <!doctype html>
 <html lang="fr">
 
+<!doctype html>
+<html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Organisation du projet — SAÉ S1.03</title>
+  <title>Organisation du projet</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/css/style.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.css" />
-  <style>
-    #gantt {
-      min-height: 360px;
-      margin-top: 1rem
-    }
-  </style>
 </head>
 
 <body data-theme="light">
-  <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
       <div class="container">
@@ -37,10 +31,10 @@
               <a class="nav-link" href="/index.html">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/contexte-objectifs.html">Contexte</a>
+              <a class="nav-link active" href="/pages/contexte-objectifs.html">Contexte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/pages/organisation-projet.html">Organisation</a>
+              <a class="nav-link" href="/pages/organisation-projet.html">Organisation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/pages/travaux-livrables.html">Rapport</a>
@@ -62,34 +56,55 @@
       </div>
     </nav>
   </header>
+
   <main class="container site-section">
     <h1>Organisation du travail d'équipe</h1>
-    <p>Le travail a été réparti entre les trois membres du groupe.
-       Chacun a eu un rôle spécifique : Tiago s'est occupé
-      de l'installation de la machine virtuelle, Kenza a géré la configuration des utilisateurs et des groupes, tandis
-      que Yasmine a pris en charge la mise en place du site web.</p>
-
+    <p class="muted">Afin de mener efficacement ce projet nous avons utilisé une méthode d’organisation spécifique, le
+      diagramme de Gantt car il va nous aider à planifier simplement toutes les phases de notre projet avec des dates
+      définis.</p>
     <section class="mt-4 section-card">
-      <h2>Plannification et progression</h2>
-      <div id="gantt" aria-label="Diagramme de Gantt"></div>
-    </section>
+      <h2>Répartition des tâches</h2>
+      <table class="table table-striped">
+        <tr>
+          <th>Responsabilité</th>
+          <th>Membre</th>
+        </tr>
+        <tr>
+          <td>Installation de la machine virtuelle</td>
+          <td>Tiago</td>
+        </tr>
+        <tr>
+          <td>Configuration des utilisateurs et des groupes</td>
+          <td>Kenza</td>
+        </tr>
+        <tr>
+          <td>Mise en place du site web</td>
+          <td>Yasmine</td>
+        </tr>
+      </table>
+
+      <section class="mt-4 section-card">
+        <h2>Diagramme de Gantt</h2>
+        <div id="gantt" aria-label="Diagramme de Gantt"></div>
+      </section>
   </main>
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="mb-0">Tiago, Kenza & Yasmine — Trio 2 — 2025</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <small>IUT Paris Cité - Rives de Seine</small>
-          </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">Tiago, Kenza & Yasmine — Trio 2 — 2025</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small>IUT Paris Cité - Rives de Seine</small>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
+  <!-- Diagramme de Gantt -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const tasks = [
@@ -107,29 +122,6 @@
         on_progress_change: (task, progress) => { console.log('Progress', task, progress); }
       });
     });
-  </script>
-  <script>
-    (function () {
-      const toggles = Array.from(document.querySelectorAll('.theme-toggle'));
-      const lsKey = 'site-theme';
-      function setTheme(t) {
-        document.body.setAttribute('data-theme', t);
-        toggles.forEach(btn => {
-          btn.textContent = t === 'dark' ? 'Thème clair' : 'Thème sombre';
-          btn.setAttribute('aria-pressed', t === 'dark');
-        });
-      }
-      const saved = localStorage.getItem(lsKey) || 'light';
-      setTheme(saved);
-      toggles.forEach(btn => btn.addEventListener('click', () => {
-        const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-        localStorage.setItem(lsKey, next);
-      }));
-      if (window.bootstrap) {
-        document.querySelectorAll('.dropdown-toggle').forEach(el => new bootstrap.Dropdown(el));
-      }
-    })();
   </script>
 </body>
 
