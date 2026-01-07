@@ -58,6 +58,9 @@
     <h1>Bilan & Travaux Livrables</h1>
     <section class="mt-4 section-card">
       <h2>Livrables attendus</h2>
+      <p>Dans ce rapport nous avons expliqué en détail l’organisation du travail suivie d’une partie Virtualisation et
+        système : référant à l’installation et la configuration de la distribution UNIX avec VirtualBox, une partie
+        Serveur web et déploiement du site web et enfin un bilan complet de ce projet.</p>
       <ul>Lien de notre rapport PDF :
         <ul>
           <li><a href="http://vm-station.iutparisrivesdeseine.fr" target="_blank"
@@ -68,7 +71,7 @@
       <p>Ce projet nous a permis de mieux comprendre les concepts de virtualisation et d'administration de serveurs web.
         Nous avons acquis des compétences pratiques en utilisant VirtualBox et Apache, ce qui nous sera utile dans nos
         futures carrières en informatique.</p>
-        
+
     </section>
   </main>
   <footer class="site-footer">
@@ -86,29 +89,6 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
-  <script>
-    (function () {
-      const toggles = Array.from(document.querySelectorAll('.theme-toggle'));
-      const lsKey = 'site-theme';
-      function setTheme(t) {
-        document.body.setAttribute('data-theme', t);
-        toggles.forEach(btn => {
-          btn.textContent = t === 'dark' ? 'Thème clair' : 'Thème sombre';
-          btn.setAttribute('aria-pressed', t === 'dark');
-        });
-      }
-      const saved = localStorage.getItem(lsKey) || 'light';
-      setTheme(saved);
-      toggles.forEach(btn => btn.addEventListener('click', () => {
-        const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-        setTheme(next);
-        localStorage.setItem(lsKey, next);
-      }));
-      if (window.bootstrap) {
-        document.querySelectorAll('.dropdown-toggle').forEach(el => new bootstrap.Dropdown(el));
-      }
-    })();
-  </script>
 </body>
 
 </html>
