@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,10 @@
         <div class="collapse navbar-collapse text-center" id="siteNav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link active" href="/index.html">Accueil</a>
+              <a class="nav-link" href="/index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/pages/vm-installation.html">Installation de la VM</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/pages/contexte-objectifs.html">Contexte</a>
@@ -60,7 +64,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="section-card">
-              <h1>Partie 1 : Installation de la machine virtuelle</h1>
+              <h1>Partie 1 : Téléchargement des fichiers nécessaires et installation des logiciels</h1>
               <hr>
               <h2>Téléchargement de la distribution</h2>
               <p>
@@ -83,128 +87,167 @@
                   class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
                 <img src="/assets/img/vm-journey/04.png" alt="Téléchargement Ubuntu"
                   class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+                On procède a l'installation de VirtualBox.
+              </p>
             </div>
-            <p>On procède a l'installation de VirtualBox.</p>
             <hr>
-            <h3>Installation et configuration de la distribution</h3>
-            <p>Une fois installé on arrive sur cette interface ou on va créer une nouvelle Machine Virtuelle en haut a
-              gauche.</p>
-            <img src="/assets/img/vm-journey/05.png" alt="Interface de VirtualBox"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Sur cette première étape, on va nommé notre Machine, spécifié le système d'exploitation utilisé et donner
-              notre image disque d'installation (précédemment téléchargé) a VirtualBox.</p>
-            <img src="/assets/img/vm-journey/06.png" alt="Création de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On choisi ensuite la quantité de RAM alloué a la machine virtuelle, 2048 Mo est un bon compromis pour une
-              utilisation fluide.</p>
-            <img src="/assets/img/vm-journey/07.png" alt="Allocation de la RAM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Ici nous lui avons allouer :
-              <strong>4096 Mb de RAM</strong>
-              ainsi que <strong>3 Processeurs</strong>.
-            </p>
-            <p>Ici, on fixera la taille maximum de notre Disque Dur virtuelle. On est partie sur <strong>80Gio</strong>,
-              au cas ou il nous est nécessaire de faire plus de choses dans la VM. On sait que cette espace n'est pas
-              alloué directement sur le disque dur de notre hôte, mais uniquement lorsque notre machine virtuelle a
-              besoin de plus de stockage.</p>
-            <img src="/assets/img/vm-journey/08.png" alt="Allocation du Disque Dur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Notre machine virtuelle est maintenant créer et prête a être démarré pour procéder au processus
-              d'installation.</p>
-            <img src="/assets/img/vm-journey/09.png" alt="Démarrage de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            <div class="section-card">
+              <h1>Partie 2 : Création de la machine virtuelle</h1>
+              <hr>
+              <p>Une fois installé on arrive sur cette interface ou on va créer une nouvelle Machine Virtuelle en haut a
+                gauche.</p>
+              <img src="/assets/img/vm-journey/05.png" alt="Interface de VirtualBox"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Sur cette première étape, on va nommé notre Machine, spécifié le système d'exploitation utilisé et
+                donner
+                notre image disque d'installation (précédemment téléchargé) a VirtualBox.</p>
+              <img src="/assets/img/vm-journey/06.png" alt="Création de la VM"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On choisi ensuite la quantité de RAM alloué a la machine virtuelle, 2048 Mo est un bon compromis pour
+                une
+                utilisation fluide.</p>
+              <img src="/assets/img/vm-journey/07.png" alt="Allocation de la RAM"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ici nous lui avons allouer :
+                <strong>4096 Mb de RAM</strong>
+                ainsi que <strong>3 Processeurs</strong>.
+              </p>
+              <p>Ici, on fixera la taille maximum de notre Disque Dur virtuelle. On est partie sur
+                <strong>80Gio</strong>,
+                au cas ou il nous est nécessaire de faire plus de choses dans la VM. On sait que cette espace n'est pas
+                alloué directement sur le disque dur de notre hôte, mais uniquement lorsque notre machine virtuelle a
+                besoin de plus de stockage.
+              </p>
+              <img src="/assets/img/vm-journey/08.png" alt="Allocation du Disque Dur"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Notre machine virtuelle est maintenant créer et prête a être démarré pour procéder au processus
+                d'installation.</p>
+              <img src="/assets/img/vm-journey/09.png" alt="Démarrage de la VM"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            </div>
             <hr>
-            <h3>Installation de la distribution</h3>
-            <p>On démarre donc la machine virtuelle, et on aperçoit que GRUB démarre !</p>
-            <img src="/assets/img/vm-journey/10.png" alt="Démarrage de la VM"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm center">
-            <p>On arrive sur l'interface d'installation d'Ubuntu, on choisi la langue puis on clique sur
-              <strong>Suivant</strong>.
-            </p>
-            <img src="/assets/img/vm-journey/11.png" alt="Installation Ubuntu - Choix de la langue"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On choisira l'installation par défaut, vu que ce n'est pas une machine qui a besoin de beaucoup de
-              paquet.</p>
-            <img src="/assets/img/vm-journey/12.png" alt="Installation Ubuntu - Type d'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On choisi d'effacer le disque et d'installer Ubuntu, vu que la machine virtuelle est neuve et n'a pas
-              besoin de partitionnement spécifique.</p>
-            <img src="/assets/img/vm-journey/13.png" alt="Installation Ubuntu - Type d'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Ici on va configurer notre utilisateur administrateur avec le modèle demander sur le document de
-              référence.</p>
-            <img src="/assets/img/vm-journey/14.png" alt="Installation Ubuntu - Configuration utilisateur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>L'installation est fini, on peu redémarrer la VM.</p>
-            <img src="/assets/img/vm-journey/15.png" alt="Installation Ubuntu - Fin de l'installation"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            <div class="section-card">
+              <h1>Partie 3 : Installation de la distribution</h1>
+              <hr>
+              <h2> Ici, on installe Ubuntu</h2>
+              <p>On démarre donc la machine virtuelle, et on aperçoit que GRUB démarre !</p>
+              <img src="/assets/img/vm-journey/10.png" alt="Démarrage de la VM"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm center">
+              <p>On arrive sur l'interface d'installation d'Ubuntu, on choisi la langue puis on clique sur
+                <strong>Suivant</strong>.
+              </p>
+              <img src="/assets/img/vm-journey/11.png" alt="Installation Ubuntu - Choix de la langue"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On choisira l'installation par défaut, vu que ce n'est pas une machine qui a besoin de beaucoup de
+                paquet.</p>
+              <img src="/assets/img/vm-journey/12.png" alt="Installation Ubuntu - Type d'installation"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On choisi d'effacer le disque et d'installer Ubuntu, vu que la machine virtuelle est neuve et n'a pas
+                besoin de partitionnement spécifique.</p>
+              <img src="/assets/img/vm-journey/13.png" alt="Installation Ubuntu - Type d'installation"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ici on va configurer notre utilisateur administrateur avec le modèle demander sur le document de
+                référence.</p>
+              <img src="/assets/img/vm-journey/14.png" alt="Installation Ubuntu - Configuration utilisateur"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>L'installation est fini, on peu redémarrer la VM.</p>
+              <img src="/assets/img/vm-journey/15.png" alt="Installation Ubuntu - Fin de l'installation"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            </div>
             <hr>
-            <h3>Telechargement des additions</h3>
-            <p>On peut se connecter à notre compte Administrateur.</p>
-            <img src="/assets/img/vm-journey/16.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Avant d'installer les additions, Avant de faire quoi que ce soit, on va installer les Additions invités
-              pour pouvoir utiliser le Drag n drop et le presse papiers.</p>
-            <img src="/assets/img/vm-journey/17.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On installe maintenant les dépendances nécessaires à l'installation des additions invités.</p>
-            <img src="/assets/img/vm-journey/18.png" alt="Installation des dépendances"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Ensuite on ouvrira le disque que l'on a monté dans la VM puis on ouvrira sa racine dans le terminal</p>
-            <img src="/assets/img/vm-journey/19.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On execute l'autorun dans le disque.</p>
-            <img src="/assets/img/vm-journey/20.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>L'installation est lancé et s'est achevé.</p>
-            <img src="/assets/img/vm-journey/21.png" alt="Installation des Additions Invités"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Une fois que l'installation est fini on va éjecter le disque virtuel</p>
-            <img src="/assets/img/vm-journey/22.png" alt="Éjection du disque virtuel"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>En suite on va pouvoir aller dans les paramètres du système puis sur la barre latérale système et dans la
-              rubrique Utilisateurs</p>
-            <img src="/assets/img/vm-journey/23.png" alt="Paramètres Utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Ici on va pouvoir rajouter nos utilisateurs.</p>
-            <img src="/assets/img/vm-journey/24.png" alt="Ajout des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Voici un exemple pour un Utilisateur :</p>
-            <img src="/assets/img/vm-journey/25.png" alt="Configuration utilisateur"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>A la fin on a quelque chose qui ressemble à ça</p>
-            <img src="/assets/img/vm-journey/26.png" alt="Utilisateurs créés"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Ensuite on va lancer un terminal pour créer notre groupe et rajouter les utilisateurs dedans, puis
-              vérifier nos modifications.</p>
-            <img src="/assets/img/vm-journey/27.png" alt="Création du groupe et ajout des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>On va maintenant pouvoir attaquer la customisation de notre terminal grâce au fichier de configuration
-              ~.bashrc . Les lignes commençant par echo sont des lignes que nous avons rajouté.</p>
-            <img src="/assets/img/vm-journey/28.png" alt="Modification du fichier .bashrc"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <img src="/assets/img/vm-journey/29.png" alt="Terminal personnalisé"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Maintenant que nous ouvrons le terminal, on obtient ce résultat :</p>
-            <img src="/assets/img/vm-journey/30.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>Voilà des dérives que nous avons fait pour chaque utilisateurs.</p>
-            <img src="/assets/img/vm-journey/31.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <img src="/assets/img/vm-journey/32.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <img src="/assets/img/vm-journey/33.png" alt="Dérives des utilisateurs"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>L’installation d’Apache2 est effectuée sur la machine virtuelle en utilisant un compte administrateur :
-              après connexion à ce compte, la commande <strong>sudo apt install apache2</strong> permet d’installer le
-              serveur web et ses paquets associés.</p>
-            <img src="/assets/img/vm-journey/34.png" alt="Installation Apache2"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
-            <p>À l’issue de l’installation, nous avons vérifié le bon fonctionnement du serveur Apache en accédant à
-              l’adresse localhost : l’affichage de la page par défaut confirme que le service HTTP est correctement
-              opérationnel.</p>
-            <img src="/assets/img/vm-journey/35.png" alt="Vérification Apache2"
-              class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            <div class="section-card">
+              <h1>Partie 4 : Installation des additions</h1>
+              <hr>
+              <p>On peut se connecter à notre compte Administrateur.</p>
+              <img src="/assets/img/vm-journey/16.png" alt="Installation des dépendances"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Avant de faire quoi que ce soit, on va installer les Additions invités
+                pour pouvoir utiliser le Drag n drop et le presse papiers.</p>
+              <img src="/assets/img/vm-journey/17.png" alt="Installation des dépendances"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On installe maintenant les dépendances nécessaires à l'installation des additions invités.</p>
+              <img src="/assets/img/vm-journey/18.png" alt="Installation des dépendances"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ensuite on ouvrira le disque que l'on a monté dans la VM puis on ouvrira sa racine dans le terminal</p>
+              <img src="/assets/img/vm-journey/19.png" alt="Installation des Additions Invités"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On execute l'autorun dans le disque.</p>
+              <img src="/assets/img/vm-journey/20.png" alt="Installation des Additions Invités"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>L'installation est lancé et s'est achevé.</p>
+              <img src="/assets/img/vm-journey/21.png" alt="Installation des Additions Invités"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Une fois que l'installation est fini on va éjecter le disque virtuel</p>
+              <img src="/assets/img/vm-journey/22.png" alt="Éjection du disque virtuel"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            </div>
+            <hr>
+            <div class="section-card">
+              <h1>Partie 5 : Configuration des utilisateurs et du terminal</h1>
+              <hr>
+              <p>En suite on va pouvoir aller dans les paramètres du système puis sur la barre latérale système et dans
+                la
+                rubrique Utilisateurs</p>
+              <img src="/assets/img/vm-journey/23.png" alt="Paramètres Utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ici on va pouvoir rajouter nos utilisateurs.</p>
+              <img src="/assets/img/vm-journey/24.png" alt="Ajout des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Voici un exemple pour un Utilisateur :</p>
+              <img src="/assets/img/vm-journey/25.png" alt="Configuration utilisateur"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>A la fin on a quelque chose qui ressemble à ça</p>
+              <img src="/assets/img/vm-journey/26.png" alt="Utilisateurs créés"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ensuite on va lancer un terminal pour créer notre groupe et rajouter les utilisateurs dedans, puis
+                vérifier nos modifications.</p>
+              <img src="/assets/img/vm-journey/27.png" alt="Création du groupe et ajout des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>On va maintenant pouvoir attaquer la customisation de notre terminal grâce au fichier de configuration
+                ~.bashrc . Les lignes commençant par echo sont des lignes que nous avons rajouté.</p>
+              <img src="/assets/img/vm-journey/28.png" alt="Modification du fichier .bashrc"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <img src="/assets/img/vm-journey/29.png" alt="Terminal personnalisé"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Maintenant que nous ouvrons le terminal, on obtient ce résultat :</p>
+              <img src="/assets/img/vm-journey/30.png" alt="Dérives des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Voilà des dérives que nous avons fait pour chaque utilisateurs.</p>
+              <img src="/assets/img/vm-journey/31.png" alt="Dérives des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <img src="/assets/img/vm-journey/32.png" alt="Dérives des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <img src="/assets/img/vm-journey/33.png" alt="Dérives des utilisateurs"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            </div>
+            <hr>
+            <div class="section-card">
+              <h1>Partie 6 : Installation et configuration du serveur web Apache2 puis déploiement</h1>
+              <hr>
+              <p>On va maintenant installer Apache2 sur la machine virtuelle. C'est Tiago qui s'en est chargé. Il s'ai
+                donc connecté
+                en tant qu'administrateur pour installer Apache2 avec la commande suivante :</p>
+              <pre>sudo apt install apache2</pre>
+              <img src="/assets/img/vm-journey/34.png" alt="Installation Apache2"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>À l’issue de l’installation, nous avons vérifié le bon fonctionnement du serveur Apache en accédant à
+                l’adresse localhost : l’affichage de la page par défaut confirme que le service HTTP est correctement
+                opérationnel.</p>
+              <img src="/assets/img/vm-journey/35.png" alt="Vérification Apache2"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Ensuite, nous avons Drag n drop notre site dans le dossier Documents de l'utilisateur administrateur
+              </p>
+              <img src="/assets/img/vm-journey/36.png" alt="Dossier Documents de l'administrateur"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Nous avons ensuite copié les fichiers du site web dans le répertoire racine du serveur web Apache, qui
+                est situé à l’adresse /var/www/html/</p>
+              <img src="/assets/img/vm-journey/37.png" alt="Copie des fichiers du site web"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+              <p>Enfin, nous avons vérifié le déploiement du site en accédant à l’adresse localhost dans un navigateur
+                web.</p>
+              <img src="/assets/img/vm-journey/38.png" alt="Vérification du déploiement du site"
+                class="img-fluid my-3 mx-auto d-block border-5 rounded shadow-sm">
+            </div>
           </div>
         </div>
       </div>
