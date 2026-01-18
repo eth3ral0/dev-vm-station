@@ -130,10 +130,11 @@
         { id: '5', name: "Mise en place du site web", start: '2025-12-13', end: '2025-12-24', progress: 100 },
         { id: '6', name: "Installation de Apache2 sur la machine", start: '2025-12-14', end: '2026-01-12', progress: 100, dependencies: '1,5' },
         { id: '7', name: "Création du Site Web", start: '2025-12-19', end: '2026-01-12', progress: 90, dependencies: '5' },
-        { id: '8', name: "Déploiement du site sur la Machine Virtuelle", start: '2026-01-09', end: '2026-01-12', progress: 80, dependencies: '5' },
+        { id: '8', name: "Déploiement du site sur la Machine Virtuelle", start: '2026-01-09', end: '2026-01-12', progress: 100, dependencies: '5' },
+        { id: '9', name: "Finalisation du rapport", start: '2026-01-12', end: '2026-01-18', progress: 100 },
       ];
       new Gantt(document.getElementById('gantt'), tasks, {
-        auto_move_label: true,
+        auto_move_label: false,
         view_mode: 'Week',
         date_format: 'DD-MM-YYYY',
         language: 'fr',
